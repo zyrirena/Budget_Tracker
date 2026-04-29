@@ -18,10 +18,7 @@ export default defineConfig({
   },
   preview: {
     host: '0.0.0.0',
-    port: parseInt(process.env.PORT) || 8080,
-    allowedHosts: [
-      'localhost',
-      'budgettracker-production-46b9.up.railway.app',
-    ],
+    port: parseInt(process.env.PORT) || 4173,
+    allowedHosts: ['all'],
   },
 });

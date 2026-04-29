@@ -10,4 +10,7 @@ if (!url || !anon) {
   );
 }
 
-export const supabase = createClient(url ?? '', anon ?? '');
+export const supabase = createClient(url ?? '', anon ?? '', {
+  db: { schema: 'public' },
+  auth: { persistSession: true, autoRefreshToken: true },
+});
